@@ -21,7 +21,7 @@ async function bootstrap() {
             }
         },
     );
-    app.useGlobalInterceptors(new MyTcpInterceptor());
+    micro.useGlobalInterceptors(new MyTcpInterceptor());
     await app.startAllMicroservices();
     await app.listen(3000);
 }
